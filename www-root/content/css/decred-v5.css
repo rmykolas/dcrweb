@@ -1501,6 +1501,7 @@ body {
   display: block;
   width: 460px;
   float: left;
+  max-width: 100%;
 }
 
 .modalparagraph.right {
@@ -1533,6 +1534,12 @@ body {
   background-color: #fff;
   box-shadow: 0 3px 10px 0 rgba(0, 0, 0, .2);
   cursor: pointer;
+}
+
+@media (max-height: 720px) {
+  .navigation {
+    top: 15px;
+  }
 }
 
 .button {
@@ -1704,6 +1711,13 @@ body {
   text-decoration: none;
 }
 
+@media (max-height: 720px) {
+  .link-section {
+    padding-top: 25px;
+    overflow-y: scroll;
+  }
+}
+
 .link-section.visible {
   opacity: 1;
   -webkit-transform: translate(0%, 0px);
@@ -1751,6 +1765,8 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: 0.25s ease-in-out;
+  position: absolute;
+  top: 10px;
 }
 
 .navigation-link.external:hover:after {
@@ -5438,13 +5454,13 @@ body {
     margin-bottom: 15px;
   }
   .button.download-wallet {
-    display: none;
+    display: none !important;
   }
   .button.all-downloads {
-    display: none;
+    display: none !important;
   }
   .button.os-specific {
-    display: none;
+    display: none !important;
   }
   .alldl {
     display: none;
@@ -6851,4 +6867,9 @@ body {
 }
 .git-decred--content a:hover {
   text-decoration: underline;
+}
+
+.mobile-play-button a {
+  color: #fff;
+  text-decoration: none;
 }
