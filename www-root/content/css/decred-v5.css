@@ -6616,9 +6616,9 @@ body {
   }
 }
 .shadow-box__content {
-  padding: 20px 20px 5px;
+  padding: 15px 20px 5px;
   float: left;
-  width: 50%;
+  width: 40%;
 }
 @media screen and (max-width: 576px) {
   .shadow-box__content {
@@ -6637,7 +6637,7 @@ body {
   color: #596D81;
   font-size: 13px;
   line-height: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
 }
 .shadow-box__content a, .toolkit-text a {
   color: #2970FF;
@@ -6652,7 +6652,7 @@ body {
 }
 .shadow-box__image {
   float: right;
-  width: 50%;
+  width: 60%;
 }
 @media screen and (max-width: 576px) {
   .shadow-box__image {
