@@ -6691,7 +6691,7 @@ body {
   float: left;
   width: 50%;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 474px) {
   .shadowbox__content {
     width: 100%;
     float: none;
@@ -6707,7 +6707,7 @@ body {
   color: #596D81;
   font-size: 13px;
   line-height: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
   min-height: 120px;
 }
 @media screen and (max-width: 576px) {
@@ -6730,7 +6730,7 @@ body {
   float: right;
   width: 50%;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 474px) {
   .shadowbox {
     width: 100%;
   }
