@@ -3425,6 +3425,41 @@ html[dir="rtl"] .lang-menu {
   display: none;
 }
 
+.subpage-description.news {
+  width: 100%;
+  margin-top: 21px;
+  margin-bottom: 20px;
+}
+
+.subpage-description.news ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.subpage-description.news ul li {
+  margin: 0 auto;
+}
+
+.subpage-description.news ul li a {
+  padding: 3px 11px;
+  text-decoration: none;
+  color: #091440;
+}
+
+.subpage-description.news ul li a.active {
+  color: #2970ff;
+  border-radius: 11px;
+  background-color: #e9f8fe;
+}
+
+.subpage-description.news ul li a:hover {
+  color: #596d81;
+  cursor: pointer;
+}
+
 @media screen and (min-width: 768px) {
   .subpage-description.ex {
     font-size: 16px;
@@ -6680,6 +6715,61 @@ html[dir="rtl"] .lang-menu {
 
 .press__releases-box p:last-child {
   margin-bottom: 0;
+}
+
+.news__releases-content {
+  width: 100%;
+  color: #000;
+  clear: both;
+  width: 100%;
+  margin: 0;
+  background: #fff;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #F3F5F6;
+}
+
+.news__releases-content img {
+  display: block;
+  margin: 0 auto 30px;
+  padding-top: 40px;
+}
+
+.news__releases-content figure {
+  margin-bottom: 30px;
+  padding-top: 10px;
+}
+
+.news__releases-content figure img {
+  display: block;
+  margin: 0 auto 9px;
+}
+
+.news__releases-content figcaption {
+  font-size: 13px;
+  line-height: 1.85;
+  color: #8997a5;
+}
+
+.news__releases-content blockquote {
+  color: #2970FF;
+  font-size: 22px;
+  line-height: 28px;
+  font-style: italic;
+  border-left: 0;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.news__releases-content > * {
+  color: #596D81;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 30px;
+}
+
+.news__releases-content a {
+  color: #2970FF;
+  text-decoration: underline;
 }
 
 .subpage__toggle {

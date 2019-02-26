@@ -1,0 +1,16 @@
+{{ $news_announcements_items := .Site.Data.news.announcements }}
+
+{{ range $news_announcements_items }}
+<div class="press__coverage-item">
+    <a href="{{ .url }}" rel="noopener noreferrer">
+        <img alt="" class="press__coverage-icon" src="/images/press-coverage-icon.svg" width="30" />
+        <div class="press__coverage-wrapper">
+            <p><span class="press__title">{{ .title }}</span>
+                <span class="press__source"> ({{ .source }})</span></p>
+            <p class="press__date">{{ dateFormat "January 2, 2006" .date }}</p>
+
+        </div>
+        <img alt="" class="press__coverage-hover-icon" src="/images/press-coverage-hover-icon.svg" width="16" />
+    </a>
+</div>
+{{ end }}

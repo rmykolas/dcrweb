@@ -12,6 +12,14 @@ $(document).ready(function () {
 		$('.subpage-content-section').find('div.'+ toggle).addClass('active');
 	});
 
+	$('.news__toggle a').on('click', function() {
+		$('.news__toggle a').removeClass(active);
+		$(this).addClass('active');
+		var toggle = $(this).attr("data-toggle");
+		$('.subpage-content-section div').removeClass('active');
+		$('.subpage-content-section').find('div.'+ toggle).addClass('active');
+	});
+
 	$('.press__releases-item').on('click', function() {
 		$a = $(this);
 

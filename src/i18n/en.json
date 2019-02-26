@@ -128,6 +128,10 @@
     "translation": "Press"
   },
   {
+    "id": "nav_news",
+    "translation": "News"
+  },
+  {
     "id": "contributors_corporate_contractor",
     "translation": "Corporate Contractor"
   },
@@ -758,6 +762,34 @@
   {
     "id": "Press",
     "translation": "Press"
+  },
+  {
+    "id": "News and Posts",
+    "translation": "News and Posts"
+  },
+  {
+    "id": "news_coverage",
+    "translation": "All"
+  },
+  {
+    "id": "news_announcements",
+    "translation": "Announcements"
+  },
+  {
+    "id": "news_research",
+    "translation": "Research and Development"
+  },
+  {
+    "id": "news_community",
+    "translation": "Community"
+  },
+  {
+    "id": "news_media",
+    "translation": "Media and Events"
+  },
+  {
+    "id": "news_contributing",
+    "translation": "Contributing"
   },
   {
     "id": "Roadmap",

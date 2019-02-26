@@ -1,0 +1,43 @@
+
+
+{{ define "main" }}
+    <div class="full-width">
+        <div class="_960">
+            <div class="subpage-description news">
+                <ul class="news__toggle">
+                    <li><a href="{{ "news/" | relLangURL }}" class="active">{{ T "news_coverage" }}</a></li>
+                    <li><a href="{{ "news_announcements/" | relLangURL }}">{{ T "news_announcements" }}</a></li>
+                    <li><a href="{{ "news_research/" | relLangURL }}">{{ T "news_research" }}</a></li>
+                    <li><a href="{{ "news_community/" | relLangURL }}">{{ T "news_community" }}</a></li>
+                    <li><a href="{{ "news_media/" | relLangURL }}">{{ T "news_media" }}</a></li>
+                    <li><a href="{{ "news_contributing/" | relLangURL }}">{{ T "news_contributing" }}</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="full-width press__wrapper">
+        <div class="_960">
+            <div class="subpage-content-section">
+                <div class="press news__coverage subpage-content w-clearfix active">
+                    {{ partial "news/coverage-list" . }}
+                </div>
+                <div class="press news__announcements subpage-content w-clearfix">
+                    {{ partial "news/announcements-list" . }}
+                </div>
+                <div class="press news__research subpage-content w-clearfix">
+                    {{ partial "news/research-list" . }}
+                </div>
+                <div class="press news__community subpage-content w-clearfix">
+                    {{ partial "news/community-list" . }}
+                </div>
+                <div class="press news__media subpage-content w-clearfix">
+                    {{ partial "news/media-list" . }}
+                </div>
+                <div class="press news__contributing subpage-content w-clearfix">
+                    {{ partial "news/contributing-list" . }}
+                </div>
+            </div>
+        </div>
+    </div>
+{{end}}

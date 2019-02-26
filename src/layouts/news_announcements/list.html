@@ -1,0 +1,28 @@
+
+
+{{ define "main" }}
+    <div class="full-width">
+        <div class="_960">
+            <div class="subpage-description news">
+                <ul class="news__toggle">
+                    <li><a href="{{ "news/" | relLangURL }}">{{ T "news_coverage" }}</a></li>
+                    <li><a href="{{ "news_announcements/" | relLangURL }}" class="active">{{ T "news_announcements" }}</a></li>
+                    <li><a href="{{ "news_research/" | relLangURL }}">{{ T "news_research" }}</a></li>
+                    <li><a href="{{ "news_community/" | relLangURL }}">{{ T "news_community" }}</a></li>
+                    <li><a href="{{ "news_media/" | relLangURL }}">{{ T "news_media" }}</a></li>
+                    <li><a href="{{ "news_contributing/" | relLangURL }}">{{ T "news_contributing" }}</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="full-width press__wrapper">
+        <div class="_960">
+            <div class="subpage-content-section">
+                <div class="press news__announcements subpage-content w-clearfix">
+                    {{ partial "news/announcements-list" . }}
+                </div>
+            </div>
+        </div>
+    </div>
+{{end}}

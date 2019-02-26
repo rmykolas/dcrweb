@@ -1,0 +1,61 @@
+{{ define "main" }}
+    <div class="full-width">
+        <div class="_960">
+            <div class="subpage-description news">
+                <ul class="news__toggle">
+                    <li><a href="{{ "news/" | relLangURL }}" class="active">{{ T "news_coverage" }}</a></li>
+                    <li><a href="{{ "news_announcements/" | relLangURL }}">{{ T "news_announcements" }}</a></li>
+                    <li><a href="{{ "news_research/" | relLangURL }}">{{ T "news_research" }}</a></li>
+                    <li><a href="{{ "news_community/" | relLangURL }}">{{ T "news_community" }}</a></li>
+                    <li><a href="{{ "news_media/" | relLangURL }}">{{ T "news_media" }}</a></li>
+                    <li><a href="{{ "news_contributing/" | relLangURL }}">{{ T "news_contributing" }}</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="full-width press__wrapper">
+        <div class="_960">
+            <div class="subpage-content-section">
+            	<div class="press__coverage-item">
+            	    <img class="press__coverage-icon" src="/images/press-release-icon.svg" width="30" alt=""/>
+
+            	    <div class="press__coverage-wrapper">
+            	        <p><span class="press__title">Decred Releases Proposal for Decentralized Exchange (“DEX”) with Eye toward Disrupting Billion-Dollar Exchange Market</span></p>
+            	        <p class="press__date">2018-04-26</p>
+            	    </div>
+            	
+                    <div class="news__releases-content">
+                        <img src="https://via.placeholder.com/780x390?Text=" alt="">
+
+                	    <div class="press__releases-content-wrapper">
+                        
+                            <blockquote>
+                            <p>Title H1 Lorem ipsum dolor sit Title H1 Lorem ipsum dolor sit Title H1 Lorem ipsum dolor sit Title H1 Lorem ipsum dolor sit </p>
+                            </blockquote>
+
+                            <p><em>Chicago, IL June 5, 2018</em> —Decred (DCR), an autonomous digital currency with built-in governance, today released a formal proposal for a new kind of decentralized exchange. Known by its temporary working name “DEX,” the proposal suggests replacing the billion-dollar centralized cryptocurrency exchange market with a trustless peer-to-peer model. The proposal comes at a time when the blockchain market seeks new levels of efficiency and questions the privacy, security, fees, and other barriers of the existing system.</p>
+
+                            <p><em>“DEX is a topic that has been discussed for some time,”</em> said Jake Yocom-Piatt, Decred Project Lead and one of the authors of the proposal. “Our goal is to structure the conversation so the developer community can step up with real-world solutions. We believe that this call-to-action is long overdue. Blockchain can only move forward by putting more power in the hands of the community. Decentralization has been our guiding principle at Decred and it is what motivated us to create this project, which can benefit the entire ecosystem.”</p>
+
+                            <h5 id="key-features-of-dex">Key features of DEX:</h5>
+
+                            <ul>
+                            <li>It is architected as a simple client and server, without a corresponding token or a blockchain.</li>
+                            <li>Server operators never take custody of client funds.</li>
+                            <li>It uses on-chain transactions for order fulfillment and rule enforcement.</li>
+                            <li>Server operators collect no fee for matching orders.</li>
+                            </ul>
+                            
+                            <figure>
+                            <img src="https://via.placeholder.com/620x280?Text=" alt="">
+                            <figcaption>Image captions</figcaption>
+                            </figure>
+
+                            {{ partial "press/release-footer" }}
+                        </div>
+            	    </div>
+            	</div>
+            </div>
+        </div>
+    </div>
+{{end}}
