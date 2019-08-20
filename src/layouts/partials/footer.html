@@ -5,7 +5,9 @@
     <div class="footercolumns width1100">
         <div class="footerrows w-row">
             <div class="footerrowscolumn1 w-col w-col-3 w-col-medium-3">
-                <a href="https://github.com/decred" target="_blank" rel="noopener noreferrer" class="footerblocklinkdev">{{ T "general_copyright" }}</a>
+                <a href="https://github.com/decred" target="_blank" rel="noopener noreferrer" class="footerblocklinkdev footer-margin-bottom">{{ T "general_copyright" }}</a>
+                <a href="https://timestamp.decred.org" target="_blank" rel="noopener noreferrer" class="footer-inline footerblocklink transition footer-margin-top footer-margin-left">{{ T "nav_time" }}</a>
+                <a href="https://bounty.decred.org" target="_blank" rel="noopener noreferrer" class="footer-inline footerblocklink transition">{{ T "nav_bounty" }}</a>
             </div>
             <div class="footerrowscolumn1 w-col w-col-3 w-col-medium-3">
                 <a href="{{ "brand/" | relLangURL }}" class="footerblocklink transition">{{ T "nav_brand_resources" }}</a>
@@ -26,26 +28,17 @@
                 </div>
                 <div class="footerblockstatsrow w-clearfix"><a id="footerDownloads" class="backgroundwashedblue borderradius4 dropshadow footerblockstatslink" href="{{ "downloads/" | relLangURL }}">52k {{ T "general_total" }}</a>
                     <div class="footerblockstatsname">{{ T "general_downloads" }}</div>
+                    <div id="explorer-links">
+                      <a href="https://dcrdata.decred.org/" target="_blank" rel="noopener noreferrer" class="footer-inline-el footerblocklink transition">{{ T "nav_dcrdata" }}</a>
+                    </div>
                 </div>
             </div>
             <div class="footerblockicon footerrowscolumn1 w-clearfix w-col w-col-2 w-col-medium-2">
-                <a target="_blank" rel="noopener noreferrer" href="https://decred.org/matrix" data-label="matrix" class="icon matrix w-inline-block"></a>
-                <a target="_blank" rel="noopener noreferrer" href="https://discordapp.com/invite/GJ2GXfz" data-label="discord" class="icon discord w-inline-block"></a>
-                <a target="_blank" rel="noopener noreferrer" href="https://slack.decred.org/" data-label="slack" class="icon slack w-inline-block"></a>
-                <a target="_blank" rel="noopener noreferrer" href="https://github.com/decred" data-label="github.com/decred" class="github icon w-inline-block"></a>
-                <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/decredproject" data-label="twitter.com/decredproject" class="icon twitter w-inline-block"></a>
-                <a target="_blank" rel="noopener noreferrer" href="https://www.reddit.com/r/decred/" data-label="reddit.com/r/decred/" class="icon reddit w-inline-block"></a>
-                <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/decredchannel" data-label="Decred Youtube channel" class="icon w-inline-block youtube"></a>
-                <a target="_blank" rel="noopener noreferrer" href="https://medium.com/decred" data-label="Decred Medium" class="icon w-inline-block medium"></a>
-                <span class="footer-social-media-localized">
-                    {{ range $.Site.Params.social_media_links }}
-                        <a target="_blank" rel="noopener noreferrer" href="{{ .url }}" data-label="{{ .label }}" class="icon w-inline-block {{ .id }}"></a>
-                    {{ end }}
-                </span>
-                <div class="backgroundlightblue borderradius4 colorblue dropshadow font12 footerblockindicator opacity000 transition">twitter.com/decredproject</div>
+                {{ range $.Site.Params.social_media_links }}
+                    <a target="_blank" rel="noopener noreferrer" href="{{ .url }}" data-label="{{ .label }}" class="icon w-inline-block {{ .id }}"></a>
+                {{ end }}
+                <div class="backgroundlightblue borderradius4 colorblue dropshadow font12 footerblockindicator opacity000 transition"></div>
             </div>
         </div>
     </div>
 </div>
-
-

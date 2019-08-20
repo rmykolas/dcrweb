@@ -10,7 +10,7 @@
   medium_alias: macsleven
 -
   matrix_id: ay-p:decred.org
-  twitter_alias: "_alyp"
+  twitter_alias: "_alyp_"
   company_id: c0
   group: development
   avatar_image: "team_1.svg"
@@ -18,14 +18,13 @@
   title: Developer
   github_id: alexlyp
 -
-  slack_alias: collins
+  matrix_id: beansgum:decred.org
   twitter_alias: "beansgum"
   company_id: raedah_group
   group: development
   avatar_image: "team_46.svg"
   name: "Collins Olanrewaju"
   title: "Mobile Developer"
-  slack_id: DA9B1EM3R
   github_id: "C-ollins"
 -
   matrix_id: davecgh:decred.org
@@ -131,13 +130,6 @@
   title: developer
   github_id: marcopeereboom
 -
-  matrix_id: kart:decred.org
-  company_id: eeter
-  group: design
-  avatar_image: "team_13.svg"
-  name: "Kärt Koosa"
-  title: "Illustrator, Designer"
--
   matrix_id: kyle_firethought:matrix.org
   twitter_alias: "kyleFirethought"
   group: design
@@ -180,13 +172,12 @@
   medium_alias: "rmykolas"
   twitter_alias: rmykolas
 -
-  slack_alias: Nick
+  matrix_id: nick.k:decred.org
   company_id: block_42
   group: development
   avatar_image: "team_66.svg"
   name: "Nick Kaeshko"
   title: "Project Manager"
-  slack_id: UA1843AS1
   linkedin_url: "https://www.linkedin.com/in/kaeshko/"
 -
   matrix_id: rogueelement:decred.org
@@ -212,12 +203,11 @@
   title: "iOS Developer"
   linkedin_url: ensoreus
 -
-  slack_alias: sndurkin
+  matrix_id: sndurkin:matrix.org
   group: development
   avatar_image: "team_11.svg"
   name: "Sean Durkin"
   title: developer
-  slack_id: D7NA04LRM
   github_id: sndurkin
 -
   matrix_id: oktapodia:matrix.org
@@ -266,13 +256,12 @@
   name: "Marcelo Lustosa"
   title: illustrator
 -
-  slack_alias: Maria
+  matrix_id: mariapleshkova:decred.org
   company_id: block_42
   group: design
   avatar_image: "team_68.svg"
   name: "Maria Pleshkova"
   title: Designer
-  slack_id: UB53WBNTZ
 -
   matrix_id: saender:decred.org
   company_id: eeter
@@ -321,12 +310,11 @@
   name: "Jonathan Zeppettini"
   title: "International Ops Lead"
 -
-  slack_alias: sef
+  matrix_id: sefbkn:matrix.org
   group: development
   avatar_image: "team_72.svg"
   name: "Youssef Boukenken"
   title: developer
-  slack_id: U652HC01Z
   github_id: sefbkn
 -
   matrix_id: richardred:decred.org
@@ -346,12 +334,11 @@
   github_id: zubairzia0
   medium_alias: zubairzia
 -
-  slack_alias: bill
+  matrix_id: billxing:decred.org
   group: community
   avatar_image: "team_56.svg"
   name: "Bill Xing"
   title: "Asia outreach"
-  slack_id: U6EV8PTHC
 -
   matrix_id: esizedave:decred.org
   group: community
@@ -414,12 +401,11 @@
   title: "Asia Pacific Outreach"
   linkedin_url: "https://au.linkedin.com/in/joshuambuirski"
 -
-  slack_alias: mm
+  matrix_id: mmartins:matrix.org
   group: community
   avatar_image: "team_77.svg"
   name: "Marcelo Martins"
   title: "Community Manager (PT)"
-  slack_id: U4EC3J8NM
   linkedin_url: "https://www.linkedin.com/in/marcelomartins"
   twitter_alias: dcrStakeyClub
 -
@@ -465,12 +451,11 @@
   medium_alias: NoahPierau
   linkedin_url: https://www.linkedin.com/in/noahpierau/
 -
-  slack_alias: oregonisaac
+  matrix_id: isaacj:decred.org
   group: community
   avatar_image: "team_54.svg"
   name: "Oregon Isaac"
   title: "Community Manager"
-  slack_id: U4X5L6Y2X
 -
   matrix_id: ingsoc:decred.org
   twitter_alias: "realingsoc"
@@ -526,3 +511,68 @@
   title: "Public Relations"
   linkedin_url: https://www.linkedin.com/in/milvian/
   twitter_alias: "MilvianPrieto"
+-
+  matrix_id: anshawblack:decred.org
+  group: marketing
+  avatar_image: "angel_dominguez.svg"
+  title: "Marketing"
+  name: "Angel Dominguez"
+-
+  matrix_id: thi4go:matrix.org
+  group: development
+  avatar_image: "thiago_de_freitas_figueiredo.svg"
+  title: "Developer"
+  name: "Thiago de Freitas Figueiredo"
+-
+  matrix_id: changhugo:decred.org
+  group: community
+  avatar_image: "hugo_chang.svg"
+  title: "Community Manager (CN)"
+  name: "Hugo Chang"
+-
+  matrix_id: dominic.d:decred.org
+  group: community
+  avatar_image: "dominic_ting.svg"
+  title: "Community Manager (CN)"
+  name: "Dominic Ting"
+  twitter_alias: "wanbihou"
+-
+  matrix_id: michae2xl:decred.org
+  group: community
+  avatar_image: "michael_guimaraes.svg"
+  title: "Community Manager"
+  name: "Michael Guimaraes"
+  twitter_alias: "michae2xl"
+-
+  matrix_id: akinsawyerr:decred.org
+  group: strategy
+  avatar_image: "akin_sawyerr.svg"
+  title: "Africa Lead & Strategy"
+  name: "Akin Sawyerr"
+  twitter_alias: "akinsawyerr"
+  linkedin_url: https://www.linkedin.com/in/akinsawyerr/
+-
+  matrix_id: klebe:decred.org
+  group: development
+  avatar_image: "kevin_hebert.svg"
+  name: "Kevin Hebert"
+  title: "Developer"
+  twitter_alias: "CamusCrypto"
+  github_id: "camus-code"
+-
+  matrix_id: VictorGuedes:decred.org
+  group: development
+  avatar_image: "victor_guedes.svg"
+  name: "Victor Guedes"
+  title: "Developer"
+  twitter_alias: "_victorguedes"
+  github_id: "victorgcramos"
+-
+  matrix_id: cryptoleslie:decred.org
+  company_id: ditto
+  group: marketing
+  avatar_image: "leslie_ankney.svg"
+  name: "Leslie Ankney"
+  title: "Public Relations"
+  linkedin_url: https://www.linkedin.com/in/leslie-ankney-91099a14b
+  twitter_alias: "CryptoLeslie"
