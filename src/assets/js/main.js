@@ -35,12 +35,7 @@ $(document).ready(function () {
 		});
 		}
 	});
-
-	// for json API
-	$.ajaxSetup({
-		async: false
-	});
-
+	
 	// language selector
 	$langSelector = $("#language-selector");
 
@@ -55,17 +50,9 @@ $(document).ready(function () {
 		API_ROOT = "https://api.decred.org",
 
 		// get json
-		APIreleases = 'https://api.github.com/repos/decred/decred-release/releases',
 		APIstats = API_ROOT + '/?c=gcs',
 		APIdc = API_ROOT + '/?c=dc',
 		APIstakepools = API_ROOT + '/?c=gsd',
-		jsonPercentMined = pow = pos = devs = all = count = null,
-		statisticsRelease = $('#statisticsRelease'),
-		statisticsDownloads = $('#statisticsDownloads'),
-		footerRelease = $('#footerRelease'),
-		footerDownloads = $('#footerDownloads'),
-
-
 
 		// font weight
 		fontRegular = 'fontregular',
@@ -124,13 +111,11 @@ $(document).ready(function () {
 
 		// statistics
 		statistics = $('.statistics'),
-		bar = $('.statisticsmindebarpercent'),
 
 		networkStatistics = $('.networkstatistics'),
 		networkStatisticsSection = $('.networkstatisticssection'),
 		networkStatisticsFloat = $('.networkstatisticsfloat'),
 
-		percentNumber = $('.percentnumber'),
 		percentMined = $('.percentmined'),
 
 		developmentRowNum = $('.developmentrownum'),
@@ -195,23 +180,38 @@ $(document).ready(function () {
 		teamCorporateLogo = $(".team-corporate-logo");
 
 
+	var currentCategory = '';
+	if (location.hash && location.hash.length) {
+		currentCategory = decodeURIComponent(location.hash.substr(1));
+	}
+
+	function setCurrentCategory(categoryName) {
+		teamFilterButton.not($(this)).removeClass('active');
+		teamFilterButton.siblings('[data-filter="' + categoryName + '"]').addClass('active');
+
+		teamMember.hide();
+		teamMembers.each(function () {
+			var filteredMember = $(this).find('[data-filter="' + categoryName + '"]');
+			filteredMember.fadeTo(time * 2, 1);
+		});
+
+		window.location.hash = categoryName;
+	}
+
 	// team subpage
 	teamMember.hide();
 	teamMembers.removeClass('hidden');
+
 	teamFilterButton.click(function () {
-		teamFilterButton.not($(this)).removeClass('active');
-		$(this).addClass('active');
+		var selectedCategory = $(this).data('filter').toLowerCase();
+		setCurrentCategory(selectedCategory);
+	});
 
-		var selectedCatergory = $(this).data('filter').toLowerCase(),
-			membersToSort = [];
-
-		teamMember.hide();
-		teamMembers.each(function(i){
-			var filteredMember = $(this).find('[data-filter="' + selectedCatergory + '"]');
-
-			filteredMember.fadeTo(time*2, 1);
-		});
-	}).eq(0).trigger('click');
+	if (currentCategory) {
+		setCurrentCategory(currentCategory);
+	} else {
+		teamFilterButton.eq(0).trigger('click');
+	}
 
 	teamCorporateLogo.add(teamSlack).on('mouseenter', function() {
 
@@ -343,37 +343,34 @@ $(document).ready(function () {
 		pos = mined * 0.3;
 		devs = mined * 0.1;
 		all = premine + pow + pos + devs;
+
+		// add calculated percent to UI bar
+		$('.percentnumber').text(jsonPercentMined + '% ');
+
+		//mission section
+		var trianglesHide = triangle.length - (Math.floor(triangle.length / 100 * jsonPercentMined) + 1),
+			triangles = [];
+		for (var i = 1; i <= triangle.length; i++) {
+			triangles.push(i);
+		}
+
+		triangles.sort(function () {
+			return .5 - Math.random();
+		}).slice(0, trianglesHide).forEach(function (e) {
+			triangle.eq(e).hide();
+		}, this);
+
+		function numberWithSpaces(x) {
+			return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+		}
+		chartSupply.text(numberWithSpaces(Math.floor(all) + 1));
+		chartPercent.text(jsonPercentMined + '%');
 	});
+	
 	// get download_count from github
 	$.getJSON(APIdc, function(data) {
-		count = data[1];
+		$('#footerDownloads').text(data[1]);
 	});
-
-	statisticsDownloads.add(footerDownloads).text(count);
-	// add calculated percent to UI bar
-	percentNumber.text(jsonPercentMined + '% ');
-
-
-
-	//mission section
-	var trianglesHide = triangle.length - (Math.floor(triangle.length / 100 * jsonPercentMined) + 1),
-		triangles = [];
-	for (var i = 1; i <= triangle.length; i++) {
-		triangles.push(i);
-	}
-
-	triangles.sort( function() {
-		return .5 - Math.random();
-	}).slice(0, trianglesHide).forEach( function(e) {
-		triangle.eq(e).hide();
-	}, this);
-
-	function numberWithSpaces(x) {
-		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
-	}
-	chartSupply.text(numberWithSpaces(Math.floor(all) + 1));
-	chartPercent.text(jsonPercentMined + '%');
-
 
 	// guide, child, content min and max height
 	block.add(child).each( function() {
@@ -478,14 +475,6 @@ $(document).ready(function () {
 		slogan.removeClass('opacity075');
 	});
 
-	// upon scroll show mined %
-	viewport.scroll( function() {
-		if (verge.inViewport(percentMined, -200)) {
-			bar.css('width', jsonPercentMined + '%');
-		}
-	});
-
-
 	// subpage header
 	viewport.trigger('resize');
 
@@ -517,12 +506,11 @@ $(document).ready(function () {
 	var stakepoolFinder = function() {
 			$("#stakepool-data").html("Loading...");
 
-			var fields = ["Live", "Immature", "Voted", "Missed", "ProportionMissed", "PoolFees", "UserCountActive", "Launched"];
+			var fields = ["Live", "Immature", "Voted", "Missed", "ProportionMissed", "PoolFees", "UserCountActive", "Age"];
 
 			tableMarkup = '<table id="pooldata" class="datatables">' +
 				'<thead>' +
 				'<tr class="">' +
-				'<th class="poolIdHeader" style="padding-left: 2px; background-image: none;">ID</th>' +
 				'<th class="addressHeader" style="padding-left: 2px; background-image: none;">Address</th>' +
 				'<th class="lastUpdatedHeader">Last Updated</th>' +
 				'<th>Proportion</th>';
@@ -581,10 +569,9 @@ $(document).ready(function () {
 						}
 						proportion = proportion.toFixed(2) + "%";
 						tableMarkup += '<tr class="rowHover transition ' + poolData["Network"] + (overCapacity ? ' overcapacity"' : '"') + '>';
-						tableMarkup += '<td class="poolId">' + poolName + '</td>';
 						tableMarkup += '<td class="address"><a target="_blank" rel="noopener noreferrer" href="' + poolData["URL"] + '">' + poolData["URL"].replace("https://", "") + '</a></td>';
-						tableMarkup += '<td class="lastUpdate inconsolata">' + lastUpdateFormatted + '</td>';
-						tableMarkup += '<td class="inconsolata">' + (overCapacity ? ' <span class="inconsolata overcapacityWarning" style="" title="See warning below">' + proportion + '</span>' : proportion) + '</td>';
+						tableMarkup += '<td class="lastUpdate dcrwebcode">' + lastUpdateFormatted + '</td>';
+						tableMarkup += '<td class="dcrwebcode">' + (overCapacity ? ' <span class="dcrwebcode overcapacityWarning" style="" title="See warning below">' + proportion + '</span>' : proportion) + '</td>';
 
 						$.each(fields, function (i, field) {
 							var value = 'N/A';
@@ -609,9 +596,9 @@ $(document).ready(function () {
 								value = poolFees
 								break;
 
-								case "Launched":
+								case "Age":
 								var launchDate = new Date(poolData["Launched"] * 1000);
-								var duration = moment.duration(launchDate - new Date()).humanize(true);
+								var duration = moment.duration(launchDate - new Date()).humanize(false);
 								order = launchDate.getTime();
 
 								value = '<time' +
@@ -624,9 +611,9 @@ $(document).ready(function () {
 							}
 
 							if (order) {
-								tableMarkup += '<td class="inconsolata" data-order="' + order + '">' + value + '</td>';
+								tableMarkup += '<td class="dcrwebcode" data-order="' + order + '">' + value + '</td>';
 							} else {
-								tableMarkup += '<td class="inconsolata">' + value + '</td>';
+								tableMarkup += '<td class="dcrwebcode">' + value + '</td>';
 							}
 						});
 
@@ -651,7 +638,7 @@ $(document).ready(function () {
 					});
 					
 					// Show the total percentage of all tickets that the VSPs manage.
-					$('<div><span style="font-weight: 700!important;">Tickets Held by Pools: </span><span class="inconsolata">' + totalPropLive.toFixed(2) + '%</span></div>').appendTo("#stakepool-data");
+					$('<div><span style="font-weight: 700!important;">Tickets Held by Pools: </span><span class="dcrwebcode">' + totalPropLive.toFixed(2) + '%</span></div>').appendTo("#stakepool-data");
 				},
 			});
 		};
@@ -716,3 +703,19 @@ for (var i = 0; i < pathEls.length; i++) {
     autoplay: true
   });
 }
+
+
+var consolestyle = [
+	'background: linear-gradient(to right, #2970ff, #2ED6A1);',
+	'color: #091440',
+	'font-family: monospace',
+	].join(';');
+  
+  console.log(`%c
+  Stakey needs you! for a bug squishin' mission https://docs.decred.org/contributing/overview/
+    ┌ᴗᴗᴗᴗᴗᴗ┐╭  ╮┌ᴗᴗᴗᴗᴗᴗ┐╭  ╮┌ᴗᴗᴗᴗᴗᴗ┐    ┌ᴗᴗᴗᴗᴗᴗ┐╭    ┌ᴗᴗᴗᴗᴗᴗ┐╭  ╮┌ᴗᴗᴗᴗᴗᴗ┐╭  ╮┌ᴗᴗᴗᴗᴗᴗ┐    ┌ᴗᴗᴗᴗᴗᴗ┐╭ 
+   ╭╣● ▄  ●╠╯  ╰╣●    ●╠╯  ╰╣●   ● ╠╮  ╭╣● ▄▄ ●╠╯   ╭╣● ▄▄ ●╠╯  ╰╣●    ●╠╯  ╰╣●   ● ╠╮  ╭╣●  ▄ ●╠╯ 
+   ╯║      ║    ║   ▄  ║    ║  ▄▄  ║╰  ╯║      ║    ╯║      ║    ║  ▄▄  ║    ║  ▄   ║╰  ╯║      ║  
+    ╚─┬──┬─╝    ╚─┬──┬─╝    ╚─┬──┬─╝    ╚─┬──┬─╝     ╚─┬──┬─╝    ╚─┬──┬─╝    ╚─┬──┬─╝    ╚─┬──┬─╝  
+      ┙  ┕        ┕  ┙        ┙  ┙        ┙  ┕         ┙  ┙        ┕  ┕        ┕  ┙        ┙  ┕    `
+  , consolestyle);

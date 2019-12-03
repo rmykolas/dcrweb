@@ -1,0 +1,67 @@
+- category: core
+  apps:
+    - name: Decrediton
+      id: decrediton
+      is_third_party: false
+    - name: Mobile Wallets
+      id: mobilewallets
+      is_third_party: false
+    - name: Command-line app suite
+      id: commandline
+      is_third_party: false
+
+- category: 3rd_party_wallets
+  apps:
+    - name: Exodus
+      id: exodus
+      links:
+        - title: Exodus releases
+          url: https://www.exodus.io/download/
+
+    - name: Coinomi
+      id: coinomi
+      links:
+        - title: Coinomi releases
+          url: https://www.coinomi.com/downloads/
+
+    - name: Ownbit
+      id: ownbit
+      links:
+        - title: Ownbit releases
+          url: https://ownbit.io/
+
+    - name: AnyBit
+      id: anybit
+      links:
+        - title: AnyBit releases
+          url: https://www.anybit.io/
+
+    - name: Atomic
+      id: atomicwallet
+      links:
+        - title: Atomic Wallet releases
+          url: https://atomicwallet.io/
+
+    - name: Guarda
+      id: guarda
+      links:
+        - title: Guarda releases
+          url: https://guarda.co/
+
+    - name: Ledger Live
+      id: ledger
+      links:
+        - title: Ledger Live wallet
+          url: https://www.ledger.com/pages/ledger-live
+
+    - name: Evercoin
+      id: evercoin
+      links:
+        - title: Evercoin wallet
+          url: https://evercoin.com/
+
+    - name: Trust Wallet
+      id: trust
+      links:
+        - title: Trust Wallet
+          url: https://trustwallet.com/

@@ -1,15 +1,9 @@
 -
-  url: "https://shapeshift.io/"
+  url: "https://instaex.io/"
   tags:
-    - "high-liquidity"
-  logo_src: "Shapeshift.jpg"
-  name: ShapeShift
-#-
-#  url: "https://flyp.me/"
-#  tags:
-#    - "instant-exchange"
-#  logo_src: "Flypme.jpg"
-#  name: Flyp
+    - "instant-exchange"
+  logo_src: "InstaEx.jpg"
+  name: InstaEx
 -
   url: "https://godex.io/"
   tags:
@@ -46,12 +40,6 @@
     - "high-liquidity"
   logo_src: "Poloniex.jpg"
   name: Poloniex
--
-  url: "https://bleutrade.com"
-  tags:
-    - all
-  logo_src: "Bleutrade.jpg"
-  name: BLEUTRADE
 -
   url: "https://fexpro.net/"
   tags:
@@ -109,18 +97,6 @@
   logo_src: "kaiserex.jpg"
   name: Kaiserex
 -
-  url: "https://nanex.co"
-  tags:
-    - all
-  logo_src: "nanex.jpg"
-  name: Nanex
--
-  url: "https://www.ooobtc.com"
-  tags:
-    - "high-liquidity"
-  logo_src: "ooobtc.jpg"
-  name: OOOBTC
--
   url: "https://braziliex.com/"
   tags:
     - fiat
@@ -138,12 +114,6 @@
     - all
   logo_src: "cointree.jpg"
   name: CoinTree
--
-  url: "https://www.ezbtc.ca/"
-  tags:
-    - all
-  logo_src: "ezbtc.jpg"
-  name: ezBtc
 -
   url: "https://okex.com/"
   tags:
@@ -199,12 +169,6 @@
   logo_src: "binance.jpg"
   name: "Binance.com"
 -
-  url: "https://easyrabbit.net/"
-  tags:
-    - "instant-exchange"
-  logo_src: "easyrabbit.jpg"
-  name: "Easyrabbit.net"
--
   url: "https://simpleswap.io/"
   tags:
     - "instant-exchange"
@@ -241,3 +205,21 @@
     - all
   logo_src: "stealthex.jpg"
   name: Stealthex
+-
+  url: "https://catalx.io/"
+  tags:
+    - "high-liquidity"
+  logo_src: "catalx.png"
+  name: CatalX
+-
+  url: "https://evercoin.com/home"
+  tags:
+    - "instant-exchange"
+  logo_src: "evercoin.png"
+  name: "Evercoin"
+-
+ url: "https://flyp.me/"
+ tags:
+   - "instant-exchange"
+ logo_src: "Flypme.jpg"
+ name: Flyp

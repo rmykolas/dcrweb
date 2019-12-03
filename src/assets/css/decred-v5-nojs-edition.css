@@ -5,7 +5,6 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  font-family: 'Source Sans Pro', sans-serif;
   color: #f9fbfc;
   font-size: 16px;
   font-weight: 400;
@@ -55,7 +54,7 @@ body {
   display: block;
 }
 
-.font16.inconsolata.colordarkblue.brand {
+.font16.dcrwebcode.colordarkblue.brand {
   padding-top: 11px;
   text-align: center;
   text-transform: uppercase;
@@ -233,18 +232,6 @@ body {
   padding-top: 65px;
   padding-bottom: 65px;
   background-color: #2970ff;
-}
-
-.statisticsminedbar {
-  width: 300px;
-  height: 8px;
-  background-color: #0c1e3e;
-}
-
-.statisticsmindebarpercent {
-  width: 0%;
-  height: 100%;
-  background-color: #2ed8a3;
 }
 
 .columnpercentmined {
@@ -911,87 +898,6 @@ body {
   float: left;
 }
 
-.icondecred {
-  width: 32px;
-  height: 32px;
-  background-image: url('../images/iconDecred.svg');
-  background-position: 50% 100%;
-  background-size: 32px;
-  background-repeat: no-repeat;
-}
-
-.icon {
-  width: 32px;
-  height: 32px;
-  margin-right: 10px;
-  margin-bottom: 8px;
-  margin-left: 10px;
-  float: right;
-  background-image: url('../images/transparent.png');
-  background-position: 50% 100%;
-  background-size: 32px;
-  background-repeat: no-repeat;
-}
-
-.icon:hover {
-  background-position: 50% 0px;
-}
-
-.icon.youtube {
-  background-image: url('../images/iconYoutube.svg');
-  background-position: 50% 100%;
-  background-size: auto;
-}
-
-.icon.youtube:hover {
-  background-position: 50% 0px;
-}
-
-.decred {
-  background-image: url('../images/iconDecred.png');
-}
-
-.slack {
-  background-image: url('../images/iconSlack.svg');
-}
-
-.discord {
-  background-image: url('../images/iconDiscord.svg');
-}
-
-.matrix {
-  background-image: url('../images/iconMatrix.svg');
-}
-
-.forum {
-  background-image: url('../images/iconForum.svg');
-}
-
-.github {
-  background-image: url('../images/iconGithub.svg');
-}
-
-.twitter {
-  background-image: url('../images/iconTwitter.svg');
-}
-
-.reddit {
-  background-image: url('../images/iconReddit.svg');
-}
-
-.medium {
-  background-image: url('../images/iconMedium.svg');
-}
-
-.footerblockindicator {
-  display: inline-block;
-  margin-top: 9px;
-  padding: 3px 12px;
-  float: right;
-  clear: right;
-  text-transform: lowercase;
-}
-
 .font12 {
   font-size: 12px;
 }
@@ -1113,7 +1019,7 @@ body {
 .swatchbottom {
   height: 40px;
   padding-top: 10px;
-  font-family: Inconsolata, monospace;
+  font-family: 'dcrweb-code';
   color: #132f4b;
   font-size: 16px;
   text-align: center;
@@ -1212,7 +1118,7 @@ body {
 }
 
 .height-122.width-122.margin20.ii {
-  background-image: url('../images/inconsolata.svg');
+  background-image: url('../images/sourceCode.svg');
   background-position: 50% 50%;
   background-size: 68px;
   background-repeat: no-repeat;
@@ -1274,14 +1180,14 @@ body {
   color: #5a6d81;
 }
 
-.width-100.colors.brand.font16.inconsolata {
+.width-100.colors.brand.font16.dcrwebcode {
   float: left;
   color: #8795a3;
   text-align: center;
 }
 
-.inconsolata {
-  font-family: Inconsolata, monospace;
+.dcrwebcode {
+  font-family: 'dcrweb-code';
 }
 
 .backgroundroyalblue {
@@ -1445,7 +1351,6 @@ body {
   margin-left: auto;
   background-color: #fff;
   box-shadow: 0 3px 10px 0 rgba(0, 0, 0, .2);
-  cursor: pointer;
 }
 
 .button {
@@ -1686,6 +1591,7 @@ body {
   float: left;
   -webkit-transition: all 80ms cubic-bezier(.455, .03, .515, .955);
   transition: all 80ms cubic-bezier(.455, .03, .515, .955);
+  cursor: pointer;
 }
 
 .navigation-button:hover {
@@ -1706,69 +1612,6 @@ body {
   -ms-flex: 1;
   flex: 1;
   border-top: 1px solid #e7eaed;
-}
-
-.nav-social-link {
-  width: 30px;
-  height: 30px;
-  margin-right: 10px;
-  float: left;
-  background-image: url('../images/transparent.png');
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-}
-
-.nav-social-link:hover {
-  opacity: 0.85;
-}
-
-.nav-social-link.nav-matrix {
-  background-image: url('../images/icon-nav-matrix.svg');
-}
-
-.nav-social-link.nav-discord {
-  background-image: url('../images/icon-nav-discord.svg');
-}
-
-.nav-social-link.nav-slack {
-  background-image: url('../images/icon-nav-slack.svg');
-}
-
-.nav-social-link.nav-irc {
-  background-image: url('../images/icon-nav-irc.svg');
-}
-
-.nav-social-link.nav-twitter {
-  background-image: url('../images/icon-nav-twitter.svg');
-}
-
-.nav-social-link.nav-forum {
-  background-image: url('../images/icon-nav-forum.svg');
-}
-
-.nav-social-link.nav-github {
-  background-image: url('../images/icon-nav-github.svg');
-  background-position: 0px 0px;
-}
-
-.nav-social-link.nav-reddit {
-  background-image: url('../images/icon-nav-reddit.svg');
-}
-
-.nav-social-link.nav-youtube {
-  background-image: url('../images/icon-nav-youtube.svg');
-}
-
-.nav-social-link.nav-medium {
-  background-image: url('../images/icon-nav-medium.svg');
-}
-
-.nav-social-link.nav-linkedin {
-  background-image: url('../images/icon-nav-linkedin.svg');
-}
-
-.nav-social-link.nav-email {
-  background-image: url('../images/icon-nav-email.svg');
 }
 
 .nav-dcr-dev-link {
@@ -1849,7 +1692,6 @@ body {
 
 .section-title-download-page {
   margin-bottom: 20px;
-  font-family: 'Source Sans Pro', sans-serif;
   color: #0c1e3e;
   font-size: 14px;
   line-height: 18px;
@@ -1950,6 +1792,10 @@ body {
 
 .section-card-title-download-page.decrediton {
   background-image: url('../images/decrediton.svg');
+}
+
+.section-card-title-download-page.mobilewallets {
+  background-image: url('../images/ic_mobile.svg');
 }
 
 .section-card-title-download-page.commandline {
@@ -2189,11 +2035,11 @@ body {
   background-position: 40px 10px;
   background-size: 10px 5px;
   background-repeat: no-repeat;
-  font-family: 'Source Sans Pro', sans-serif;
   color: #091440;
   font-size: 13px;
   font-weight: 400;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .lang-menu:hover {
@@ -2390,7 +2236,6 @@ body {
 }
 
 .mission-copy {
-  font-family: 'Source Sans Pro', sans-serif;
   color: #5a6d81;
   line-height: 22px;
   font-weight: 400;
@@ -2512,7 +2357,7 @@ body {
 }
 
 .quotes-quote {
-  font-family: Inconsolata, monospace;
+  font-family: 'dcrweb-code';
   color: #e9f8fe;
   font-size: 21px;
   line-height: 22px;
@@ -3469,7 +3314,6 @@ body {
   margin-left: 20px;
   -webkit-transition: opacity 100ms ease;
   transition: opacity 100ms ease;
-  font-family: 'Source Sans Pro', sans-serif;
   color: #c4cbd2;
   font-size: 13px;
   line-height: 17px;
@@ -3628,9 +3472,6 @@ body {
   .statisticscontent.width1100 {
     padding-right: 60px;
     padding-left: 60px;
-  }
-  .statisticsminedbar.borderradius4.margin20 {
-    width: 100%;
   }
   .column {
     margin-bottom: 20px;
@@ -4236,7 +4077,7 @@ body {
     width: 120px;
     margin-right: 20px;
   }
-  .width-100.colors.brand.font16.inconsolata {
+  .width-100.colors.brand.font16.dcrwebcode {
     display: block;
     width: 100%;
   }
