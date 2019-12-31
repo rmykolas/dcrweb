@@ -3503,7 +3503,7 @@ html[dir="rtl"] .lang-menu {
   .landing-conten-bg {
     height: 450px;
   }
-  .landing-text-block p {
+  .landing-text-block {
     width: 50%
   }
 }
